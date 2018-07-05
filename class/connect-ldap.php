@@ -7,19 +7,19 @@
 	 */
 	class ConnectLdap  {
 		/*
-		var $ldapserver  ="ldapemail.ine.mx";
+		var $ldapserver  ="ldapemail.example.com";
 		var $ldapport    ="389";
 		var $ldapports   ="636";
 		var $ldapbind	 ="";
 		var $baseDn      ="dc=ife.org.mx";
-    	var $puser       ="ou=people,dc=example,dc=com";
-    	var $guser       ="ou=generica,dc=example,dc=com";
-	    var $euser       ="ou=externo,ou=people,dc=example,dc=com";
-    	var $ldapUser    ="cn=Manager,dc=ife.org.mx";
-    	var $ldappass    ="";
+    		var $puser       ="ou=people,dc=example,dc=com";
+    		var $guser       ="ou=generica,dc=example,dc=com";
+	    	var $euser       ="ou=externo,ou=people,dc=example,dc=com";
+    		var $ldapUser    ="cn=Manager,dc=example,dc=com";
+    		var $ldappass    ="";
 		var $conn        ="";
 		var $result      ="";
-		var $dbserver    ="bd.ine.mx";
+		var $dbserver    ="bd.example.com";
 		var $dbpasswd    ="setmefree123";
 		var $dbuser      ="anonymous";
 		*/
