@@ -7,35 +7,35 @@
 	 */
 	class ConnectLdap  {
 		/*
-		var $ldapserver  ="ldapemail.ine.mx";
+		var $ldapserver  ="ldapemail.example.com";
 		var $ldapport    ="389";
 		var $ldapports   ="636";
 		var $ldapbind	 ="";
 		var $baseDn      ="dc=ife.org.mx";
-    	var $puser       ="ou=people,dc=ife.org.mx";
-    	var $guser       ="ou=generica,dc=ife.org.mx";
-	    var $euser       ="ou=externo,ou=people,dc=ife.org.mx";
-    	var $ldapUser    ="cn=Manager,dc=ife.org.mx";
-    	var $ldappass    ="?ld4PC3nT.R1.4L$";
+    		var $puser       ="ou=people,dc=example,dc=com";
+    		var $guser       ="ou=generica,dc=example,dc=com";
+	    	var $euser       ="ou=externo,ou=people,dc=example,dc=com";
+    		var $ldapUser    ="cn=Manager,dc=example,dc=com";
+    		var $ldappass    ="";
 		var $conn        ="";
 		var $result      ="";
-		var $dbserver    ="bd.ine.mx";
+		var $dbserver    ="bd.example.com";
 		var $dbpasswd    ="setmefree123";
 		var $dbuser      ="anonymous";
 		*/
-		var $ldapserver  ="ldap.ine.mx";
+		var $ldapserver  ="ldap.example.com";
 		var $ldapport    ="389";
 		var $ldapports   ="636";
 		var $ldapbind	 ="";
-		var $baseDn      ="dc=ine,dc=mx";
-    	var $puser       ="ou=people,dc=ine,dc=mx";
-    	var $guser       ="ou=generica,dc=ine,dc=mx";
-	    var $euser       ="ou=externo,ou=people,dc=ine,dc=mx";
-    	var $ldapUser    ="cn=Manager,dc=ine,dc=mx";
-    	var $ldappass    ="redhat";
+		var $baseDn      =",dc=example,dc=com";
+    	        var $puser       ="ou=people,,dc=example,dc=com";
+    	        var $guser       ="ou=generica,dc=example,dc=com";
+	        var $euser       ="ou=externo,ou=people,dc=example,dc=com";
+    	  	var $ldapUser    ="cn=Manager,dc=example,dc=com";
+    		var $ldappass    ="redhat";
 		var $conn        ="";
 		var $result      ="";
-		var $dbserver    ="bd.ine.mx";
+		var $dbserver    ="bd.example.com";
 		var $dbpasswd    ="setmefree123";
 		var $dbuser      ="anonymous";		
 		function __construct($secure=false,$typedb="ldap") {

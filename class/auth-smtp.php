@@ -10,7 +10,7 @@
 		 * @date : jue mar  5 11:35:08 CST 2015
 		 * @goal : Look up possible users provided by user form. 
 		 */
-		function findUser($attribute = "uid", $value = "*", $baseDn = "ou=people,dc=ife.org.mx") {
+		function findUser($attribute = "uid", $value = "*", $baseDn = "ou=people,dc=example,dc=com") {
     			$this->result=ldap_search($this->conn, $baseDn, $attribute . '=' . $value);
     			if ($this->result){
         			//if the result contains entries with surnames, sort by surname: 

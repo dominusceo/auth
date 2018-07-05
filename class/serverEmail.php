@@ -9,7 +9,7 @@ class EmailConnect extends AuthSMTP {
     var $euser;
     var $email;
     var $elogin;
-	VAR $login;
+    var $login;
     var $clogin;
     var $eserver;
     var $sprotocol;
@@ -17,39 +17,39 @@ class EmailConnect extends AuthSMTP {
     var $mailhost;
     var $localhost;
     var $newLine;
-	var $idEstado;
-	var $idDistrito;
+    var $idEstado;
+    var $idDistrito;
     function __construct() {
         $this->conn = ConnectLdap::__construct();
-		// First case: just for the example of segregating users starting from "a" to "b" letters on correo-n1 server.
+	// First case: just for the example of segregating users starting from "a" to "b" letters on correo-n1 server.
         // Second case: all users for "circunscripcion 1"
         //$this->backend_ip["correo-n1"] = "10.0.48.42";
-        //$this->backend_ip["correo-n1"] = "correo-n1.ine.mx";
+        //$this->backend_ip["correo-n1"] = "correo-n1.example.com";
         $this->backend_ip["correo-n1"] = "192.168.100.42";
         // First case: just for the example of segregating users starting from "c" to "f" letters on correo-n2 server.
         // Second case: all users for "circunscripcion 2"
         //$this->backend_ip["correo-n2"] = "10.0.48.43";
-        //$this->backend_ip["correo-n2"] = "correo-n2.ine.mx";
+        //$this->backend_ip["correo-n2"] = "correo-n2.example.com";
         $this->backend_ip["correo-n2"] = "192.168.100.43";
-		// First case: just for the example of segregating users starting from "g" to "z" letters on correo-n3 server.
+	// First case: just for the example of segregating users starting from "g" to "z" letters on correo-n3 server.
         // Second case: all users for "circunscripcion 3"
         //$this->backend_ip["correo-n3"] = "10.0.48.44";
-		//$this->backend_ip["correo-n3"] = "correo-n3.ine.mx";
-		$this->backend_ip["correo-n3"] = "192.168.100.44";
-		// First case: just for the example of segregating users starting from "g" to "z" letters on correo-n3 server.
-		// Second case: all users for "circunscripcion 4"
+	//$this->backend_ip["correo-n3"] = "correo-n3.example.com";
+	$this->backend_ip["correo-n3"] = "192.168.100.44";
+	// First case: just for the example of segregating users starting from "g" to "z" letters on correo-n3 server.
+	// Second case: all users for "circunscripcion 4"
         //$this->backend_ip["correo-n4"] = "10.0.48.45";
-		//$this->backend_ip["correo-n4"] = "correo-n4.ine.mx";
-		$this->backend_ip["correo-n4"] = "192.168.100.45";
-		// First case: just for the example of segregating users starting from "g" to "z" letters on correo-n3 server.
-		// Second case: all users for "circunscripcion 5"
-		//$this->backend_ip["correo-n5"] = "10.0.48.46";
-		//$this->backend_ip["correo-n5"] = "correo-n5.ine.mx";
-		$this->backend_ip["correo-n5"] = "192.168.100.46";
-		// First case: just for the example of segregating users starting from "g" to "z" letters on correo-n3 server.
-		// Second case: all users for "Oficinas Centrales" -- perhaps another server to save 'genericas' and another accounts
-		//$this->backend_ip["correo-n0"] = "correo-n0.ine.mx";
-		$this->backend_ip["correo-n0"] = "192.168.100.47";
+	//$this->backend_ip["correo-n4"] = "correo-n4.example.com";
+	$this->backend_ip["correo-n4"] = "192.168.100.45";
+	// First case: just for the example of segregating users starting from "g" to "z" letters on correo-n3 server.
+	// Second case: all users for "circunscripcion 5"
+	//$this->backend_ip["correo-n5"] = "10.0.48.46";
+	//$this->backend_ip["correo-n5"] = "correo-n5.example.com";
+	$this->backend_ip["correo-n5"] = "192.168.100.46";
+	// First case: just for the example of segregating users starting from "g" to "z" letters on correo-n3 server.
+	// Second case: all users for "Oficinas Centrales" -- perhaps another server to save 'genericas' and another accounts
+	//$this->backend_ip["correo-n0"] = "correo-n0.ine.mx";
+	$this->backend_ip["correo-n0"] = "192.168.100.47";
         $this->localhost = "localhost";
         $this->newLine = "\r\n";
     }
@@ -109,13 +109,13 @@ class EmailConnect extends AuthSMTP {
             $this->setUnknownMsg();
         }
     }
-	 */
+    */
 	 
 	/* Author: Ricardo Carrillo
-     * @date : mie nov 25 13:17:34 CST 2015
-     * @goal : determining "circunscription" for $user, based on $idEstado 
+	 * @date : mie nov 25 13:17:34 CST 2015
+ 	 * @goal : determining "circunscription" for $user, based on $idEstado 
 	 * 		   Estado:codigo:circunscripcion: -> Circunscripcion 1: bc:2:1, bcs:3:1, chih:8:1, dgo:10:1, jal:14:1, nay:18:1, son:26:1, sin:25:1
-	 **/ 
+	 **/
     function getMailServer($user) {
         //$this->euser = $this->identifyUser($user);
         //$this->email = $this->getAttr($this->euser,"mailHost");
